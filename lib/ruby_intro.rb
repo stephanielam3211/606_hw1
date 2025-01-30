@@ -11,7 +11,7 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+  false
 end
 
 # Part 2
