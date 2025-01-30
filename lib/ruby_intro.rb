@@ -37,6 +37,9 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
+  if !string.match?(/\A[01]*\z/)
+    return false
+  end
   bin_arr = string.each_byte.map {|b| sprintf('%08b', b)}
   bin_arr.each do |bin|
     dec_num = bin.to_i(2)
