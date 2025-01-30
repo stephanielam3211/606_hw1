@@ -11,6 +11,11 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
+  arr.each_with_index do |num1, i|
+    arr[(i + 1) .. -1].each do |num2|
+      return true if num1 + num2 == number
+    end
+  end
   false
 end
 
