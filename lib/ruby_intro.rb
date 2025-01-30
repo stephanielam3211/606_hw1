@@ -34,6 +34,7 @@ def starts_with_consonant?(string)
   if !first_letter.match?(/[a-z]/)
     return false
   end
+  true
 end
 
 def binary_multiple_of_4?(string)
