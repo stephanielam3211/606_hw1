@@ -72,10 +72,16 @@ class BookInStock
   end
   
   def isbn=(new_isbn)
+    if new_isbn.empty?
+      raise ArgumentError, "ISBN cannot be empty"
+    end
     @isbn = new_isbn
   end
   
   def price=(new_price)
+    if new_price <= 0
+      raise ArgumentError, "Price has to be greater than $0"
+    end
     @price = new_price
   end
 
