@@ -27,6 +27,10 @@ end
 
 def starts_with_consonant?(string)
   return false if string.empty?
+  first_letter = string[0].downcase
+  if %w[a e i o u].include?(first_letter)
+    return false
+  end
   if !first_letter.match?(/[a-z]/)
     return false
   end
