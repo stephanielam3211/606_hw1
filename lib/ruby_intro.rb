@@ -37,7 +37,14 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+  bin_arr = string.each_byte.map {|b| sprintf('%08b', b)}
+  bin_arr.each do |bin|
+    dec_num = bin.to_i(2)
+    if dec_num % 4 == 0
+      return true
+    end
+  end
+  false
 end
 
 # Part 3
