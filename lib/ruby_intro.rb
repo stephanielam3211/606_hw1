@@ -51,7 +51,13 @@ end
 
 # Object representing a book
 class BookInStock
-    def initialize(isbn, price)
+  def initialize(isbn, price)
+    if isbn.empty?
+      raise ArgumentError, "ISBN cannot be empty"
+    end
+    if price <= 0
+      raise ArgumentError, "Price has to be greater than $0"
+    end
     @isbn = isbn
     @price = price.to_f
   end
