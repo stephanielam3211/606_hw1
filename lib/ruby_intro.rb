@@ -26,7 +26,7 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  return false if string.empty?
 end
 
 def binary_multiple_of_4?(string)
